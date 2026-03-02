@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap");
+
+.playing-card {
+  width: 80px;
+  height: 112px;
+  background: #fdfaf4;
+  border-radius: 8px;
+  border: 1px solid #d4c9b0;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.15),
+    0 6px 12px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+  font-family: "Cinzel", serif;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    opacity 0.15s ease;
+  user-select: none;
+}
+
+.playing-card.red .playing-card-value,
+.playing-card.red .playing-card-symbol {
+  color: #c0152a;
+}
+
+.playing-card.black .playing-card-value,
+.playing-card.black .playing-card-symbol {
+  color: #1a1a1a;
+}
+
+.playing-card-corner {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  line-height: 1;
+  gap: 1px;
+}
+
+.playing-card-corner.bottom-right {
+  align-self: flex-end;
+  transform: rotate(180deg);
+}
+
+.playing-card-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.playing-card-symbol {
+  font-size: 1.2rem;
+}
+
+.playing-card-symbol.centre {
+  font-size: 1.6rem;
+}
+
+.playing-card-centre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-size: 3rem;
+}
