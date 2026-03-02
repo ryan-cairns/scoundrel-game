@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { shuffle, buildDeck, dealRoom } from "./game/Deck";
 import type { Card, Deck } from "./types";
+import PlayingCard from "./components/PlayingCard";
 
 function App() {
   const initDeck = shuffle(buildDeck());
@@ -16,8 +17,8 @@ function App() {
       <p>Cards in room:</p>
       <ul>
         {room.map((card, index) => (
-          <li key={index}>
-            {card.value} of {card.suit}
+          <li>
+            <PlayingCard key={index} card={card} />
           </li>
         ))}
       </ul>
