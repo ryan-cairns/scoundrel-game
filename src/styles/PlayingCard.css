@@ -68,3 +68,9 @@
   flex: 1;
   font-size: 3rem;
 }
+
+.playing-card.used {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}

@@ -32,7 +32,7 @@ export interface Deck {
 
 export interface Weapon {
   card: Card;
-  lastMonster: number;
+  lastMonster: number | null;
 }
 
 export interface GameState {
@@ -42,4 +42,5 @@ export interface GameState {
   weapon: Weapon | null;
   lastRoomSkipped: boolean;
   room: Card[];
+  usedCards: Card[];
 }
